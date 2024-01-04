@@ -1,0 +1,21 @@
+SELECT 
+	    FORMAT_DATETIME('%Y-%m', trip_start_timestamp) as date_month,
+	    ROUND(SUM(tips)) as tips_sum
+	
+FROM `bigquery-public-data.chicago_taxi_trips.taxi_trips`
+
+WHERE taxi_id IN (
+			  SELECT taxi_id
+        FROM `bigquery-public-data.chicago_taxi_trips.taxi_trips`
+        WHERE 
+          EXTRACT(YEAR FROM trip_start_timestamp) = 2022 and EXTRACT(MONTH FROM trip_start_timestamp) = 04
+          AND trip_seconds > 0 
+          AND trip_miles > 0
+
+        GROUP BY taxi_id
+        ORDER BY SUM(tips) DESC
+        LIMIT 3
+               )
+			   
+GROUP BY date_month
+ORDER BY date_month
