@@ -5,7 +5,7 @@
 2. В файле <a href='https://github.com/Alik90210/Test_exercise/blob/main/Test_hhru.ipynb'> Test_hhru.ipynb </a> на языке Python 3.8 и c использованием библиотеки Pandas я вычисляю  как изменялась сумма чаевых в процентах в последующие месяцы по сравнению с предыдущим и добавляю новую колонку tips_change с данной информацией. Итерацию в самом SQL считаю делать нерационально.
 
 ### Результат :floppy_disk:
-3. В итоге получился файл test_hhru_Kruglov_A.csv.
+3. В итоге получился файл <a href='https://github.com/Alik90210/Test_exercise/blob/main/test_hhru_Kruglov_A.csv' test_hhru_Kruglov_A.csv </a>.
 
 ### Комментарии :speech_balloon:
 4. Можно добавить стоблец taxi_id, для этого можно сделать все тоже самое для конкрентого taxi_id по отдельности (всего их 3) и собрать в общую талицу. 
